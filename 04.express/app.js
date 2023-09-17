@@ -12,8 +12,8 @@ app.get('/', (req, res) => {
     });
 });
 
+// Raouter User
 app.use('/users', usersRouter);
-
 
 app.listen(port, () => {
     console.log(`listening on ${port}`)
