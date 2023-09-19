@@ -10,6 +10,7 @@ const bcrypt = require('bcrypt');
 //-- Create User (Sign Up)
 function signup(req, res, next) {
 
+    //-- Enkripsi Password
     bcrypt.genSalt(10, function(err, salt) {
         bcrypt.hash(req.body.password, salt, function(err, hash) {
 
